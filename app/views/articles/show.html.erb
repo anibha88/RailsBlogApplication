@@ -1,0 +1,23 @@
+<p> This is the page to display - Show page </p>
+<p>
+	<strong>Title:</strong>
+	<%= @article.title %>
+</p>
+
+<p>
+	<strong>Text:</strong>
+	<%= @article.text %>
+</p>
+
+<h2> Comments </h2>
+<%= render @article.comments %>
+
+
+
+<%# http://stackoverflow.com/questions/24816226/ruby-on-rails-form-for-with-two-parameters  %>
+<h2> Add a comment </h2>
+<%= render "comments/form" %>
+
+
+<%= link_to 'Go back', articles_path %>
+<%= link_to 'Edit', edit_article_path(@article) %>
